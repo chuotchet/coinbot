@@ -24,7 +24,7 @@ var connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 server.get('/', function (req, res, next) {
-  res.redirect('http://www.vppanhdao.com/');
+  res.send('ahihi');
   return next();
 });
 
