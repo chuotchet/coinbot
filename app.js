@@ -32,6 +32,7 @@ server.get('/', function (req, res, next) {
 var bot = new builder.UniversalBot(connector, function (session) {
     var message = session.message.text;
   message = message.replace("@CoinBot ","");
+  message = message.replace("bd2d6a40-4d78-4afb-93c2-32b781a1035e ","");
   console.log(message);
     var coinName = coinlist[message.toUpperCase()];
     if (!coinName) coinName = message.toLowerCase();
