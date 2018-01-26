@@ -24,8 +24,7 @@ var connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 server.get('/', function (req, res, next) {
-  res.send('ahihi');
-  return next();
+  res.redirect('http://www.vppanhdao.com/', next);
 });
 
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
