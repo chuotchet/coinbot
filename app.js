@@ -24,7 +24,7 @@ var connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 server.get('/', function (req, res, next) {
-  res.send('ahihi');
+  res.redirect('http://www.vppanhdao.com/');
   return next();
 });
 
@@ -32,6 +32,7 @@ server.get('/', function (req, res, next) {
 var bot = new builder.UniversalBot(connector, function (session) {
     var message = session.message.text;
   message = message.replace("@CoinBot ","");
+  message = message.replace("CoinBot ","");
   message = message.replace("bd2d6a40-4d78-4afb-93c2-32b781a1035e ","");
   console.log(message);
     var coinName = coinlist[message.toUpperCase()];
