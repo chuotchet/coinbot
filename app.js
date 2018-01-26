@@ -31,6 +31,7 @@ server.get('/', function (req, res, next) {
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
 var bot = new builder.UniversalBot(connector, function (session) {
     var message = session.message.text;
+  message = message.replace("@CoinBot ","");
   console.log(message);
     var coinName = coinlist[message.toUpperCase()];
     if (!coinName) coinName = message.toLowerCase();
